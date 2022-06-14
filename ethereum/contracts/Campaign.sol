@@ -75,3 +75,4 @@ contract Campaign {
 }
 
 //npm install ganache-cli mocha solc@0.4.17 fs-extra web3 @truffle/hdwallet-provider
+//npm install ext react react-dom
