@@ -72,7 +72,23 @@ contract Campaign {
         requests[index].recipient.transfer(requests[index].value); //transfer the money to the recipient
         requests[index].complete = true;
     }
+
+    function getSummary() public view returns(uint, uint, uint, uint,address) {
+        return (
+            minimumContribution,
+            this.balance,
+            requests.length,
+            contributersCount,
+            manager
+        );
+    }
+
+    function getRequestsCount() public view returns(uint) {
+        return requests.length;
+    }
 }
 
 //npm install ganache-cli mocha solc@0.4.17 fs-extra web3 @truffle/hdwallet-provider
 //npm install ext react react-dom
+//npm install semantic-ui-react semantic-ui-css
+//npm install next-routes --legacy-peer-deps (for dynamic routimng in next.js)
