@@ -3,7 +3,7 @@ const Web3 = require("web3");
 const compiledFactory = require("./build/CampaignFactory.json");
 
 //manually setting up provider which contains
-//1. account mnemonic which is enough for public and private keys
+//1. account pnemonic which is enough for public and private keys
 //2. infura link to rinkeby network
 const provider = new HDWalletProvider(
 	"pnemonic phrase",
